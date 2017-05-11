@@ -28,7 +28,15 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  *
  * The function will return true if the number passed into the function is equal to or greater than Hawaii's voting age. Console.log your result.
 */
+function canVote(age){
+	if(age>= 18){
+		return true;
 
+	}else{
+		return false;
+	}
+}
+console.log("1.canVote: ", canVote(18));
 
 /*
  * #2
@@ -41,7 +49,13 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * The function will return the message: "Login Success!", if the string passed into the function is "test1234"
  * Console.log your result.
 */
+function login(password){
+	if(password === "test1234"){
+		return "Login Success!";
+	}
+}
 
+console.log(login("test1234"));
 
 /*
  * #3
@@ -56,6 +70,15 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * Console.log your result.
 */
 
+function isGreaterThan(first,second){
+	if(first > second){
+		return "true";
+
+	}
+}
+console.log(isGreaterThan(4,1));
+
+
 
 
 /*
@@ -69,9 +92,14 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * The function will return true if the value passed into the function is "true".
  * Console.log your result.
 */
-
-
-
+function mustBeTrue(boo){
+	if(boo === true){
+		return true;
+	}else{
+		return false;
+	}
+}
+console.log("mustBeTrue: ", mustBeTrue(true));
 /*
  * #5
  * Function - bigBird
@@ -83,7 +111,12 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * The function will return the message "Word to Big Bird!", if the string passed into the function is a three-letter word. 
  * Console.log your result.
 */
-
+function bigBird(word){
+	if(word.length === 3){
+		return "Word to Big Bird!";
+	}
+}
+console.log("bigBird: ", bigBird("cat"));
 
 
 /*
@@ -98,8 +131,14 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * If the strings are equal, the function will return the message "You look mahvelous!" Otherwise, return the message: "I don't know who you are anymore." 
  * Console.log your result.
 */
-
-
+function isEqual(first,second){
+	if(first === second){
+		return "You look mahvelous!";
+	}else{
+		return "I don't know who you are anymore.";
+	}
+}
+console.log(isEqual("dog","duck" ));
 /*
  * #7
  * Function - notEqual
@@ -112,8 +151,14 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * If the strings are not equal, the function will return the message "Opposites do attract." Otherwise, return the message: "Cause it's like you're my mirror." 
  * Console.log your result.
 */
-
-
+function notEqual(first,second){
+	if(first!== second){
+		return "Opposites do attract.";
+	}else{
+		return "Cause its like you're my mirror.";
+	}
+}
+console.log(notEqual("boy", "girl"));
 /*
  * #8
  * Function - spareChange
@@ -125,9 +170,14 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * The function will return true if the number passed into the function is greater than 100, otherwise it will return false.
  * Console.log your result.
 */ 
-
-
-
+function spareChange(money){
+	if(money>100){
+		return true;
+	}else{
+		return false;
+	}
+}
+console.log(spareChange(99));
 /*
  * #9
  * Function - dirty30
@@ -141,8 +191,16 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * The function will return true if the sum of all the number values is greater than 30, otherwise it will return false.
  * Console.log your result.
 */ 
+function dirty30(one,two,three){
+	var sum = one + two + three; 
+	if(sum> 30){
+		return true;
+	}else{
+		return false;
+	}
 
-
+}
+console.log(dirty30(1,2,30));
 
 /*
  * #10
@@ -155,9 +213,14 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * The function will return true if the number passed in is an even integer, otherwise it will return false.
  * Console.log your result.
 */ 
-
-
-
+function evenStevens(num){
+	if(num%2 === 0){
+		return true;
+	}else{
+		return false;
+	}
+}
+console.log(evenStevens(6));
 
 /*
  * #11
@@ -171,8 +234,14 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * If BOTH values are 21 or over, the function will return the message: "Welcome to the Legends Lounge." Otherwise, it will return the message: "Chuck E Cheese is across the street."
  * Console.log your result.
 */ 
-
-
+function daClub(cover,age){
+	if(cover=== 21 && age >= 21){
+		return "time to party!";
+	}else{
+		return "nice try!";
+	}
+}
+console.log(daClub(21,21));
 /*
  * #12
  * Function - graduation
@@ -185,8 +254,14 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * If EITHER the number value is greater than or equal to 120 or the boolean value is true, then the function will return the message: "Congratulations on a job well done." Otherwise, return the message: "See you in summer school."
  * Console.log your result.
 */ 
-
-
+function graduation(credits,thesis){
+	if (credits >= 120 || thesis === true){
+		return "Congratulations on a job well done.";
+	}else{
+		return "See you in summer school.";
+	}
+}
+console.log(graduation(12,false));
 
 /*
  * #13
@@ -199,8 +274,17 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * The function will return the message: "You are riding Honolulu's Rail.", if the number value is less than 50, otherwise it will return the message: "You are riding an Amtrak.", if the number value is less than 100, and return the message: "Now you ballin' in the Shinkansen!", if the number value is greater than or equal to 100.
  * Console.log your result.
 */ 
+function moneyTrain(speed){
+	if (speed < 50){
+		return "You are riding Honolulu's Rail.";
+			}else if (speed<100){
+              return "You are riding an Amtrak";
+			}else{
+				return "Now you ballin' in the Shinkansen!";
+			}
 
-
+}
+console.log(moneyTrain(100));
 /*
  * #14
  * Function - buyDoughnut
@@ -214,9 +298,19 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * Invoke your function again.
  * Console.log budget and doughnutBought again.
 */ 
+var budget = 25;
+var doughnutPrice = 5;
+var doughnutBought = 0;
 
+function buyDoughnut(){
+	if(budget >= doughnutPrice){
+		budget -= doughnutPrice;
+		doughnutBought++;
+	}
 
-
+}
+console.log(budget);
+console.log(doughnutBought);
 
 
 /*
@@ -245,7 +339,9 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 4"
  * "Player: 5"
 */
-
+for (i= 1; i<=5; i++){
+	console.log("player ", i);
+}
 
 /* 
  * #16
@@ -253,6 +349,9 @@ for (var i = 0; i<toyotaModels.length; i++){
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
 
+for(var i = 0; i<myFavFoods.length; i++){
+    console.log(myFavFoods[i]);
+  }
 
 /*
  * #17
@@ -269,7 +368,13 @@ for (var i = 0; i<toyotaModels.length; i++){
  * Console.log your result.
 */
 
-
+var numArray = [23,14,78,64,21];
+var total = 0;
+function sumItUp(arr){
+	for(i =0; i<numArray.length; i++){
+		console.log(numArray[i]);
+	}
+}
 
 /*
  * #18
